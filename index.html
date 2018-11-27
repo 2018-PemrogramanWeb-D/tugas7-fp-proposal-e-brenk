@@ -1,0 +1,378 @@
+<?php $link = mysql_connect ("localhost", "Gusrai", "jonmin123"); ?>
+
+
+<html>
+
+<head>
+	<?php $link = mysql_connect ("localhost", "Gusrai", "jonmin123"); ?>
+
+	<title>Online Shop E-Brenk</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<script type="text/javascript" src="index.js"></script>
+	
+</head><!--/head-->
+
+<body>
+	<header id="header"><!--header-->
+		<div class="header_top"><!--header_top-->
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-8">
+						<div class="contactinfo">
+							<div class="col-sm-4">
+									<a href="index.html"><img src="images/home/serigala.jpg" width="200" height="40" alt="">" /></a>
+								<div class="logo pull-left">
+								</div>
+							</div>
+							<ul class="nav navbar-nav">
+								<li><a onclick=klik()  ><i class="fa fa-user"></i> Login</a></li>
+								<li><a onclick=register()><i class="fa fa-star"></i> Daftar</a></li>
+								<li><a href="#"><i class="fa fa-crosshairs"></i> Checkout</a></li>
+								<li><a href="#"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+							</ul>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div><!--/header_top-->
+		<div class="header-bottom"><!--header-bottom-->
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-9">
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+						</div>
+						<div class="mainmenu pull-left">
+							<ul class="nav navbar-nav collapse navbar-collapse">
+								<li><a href="index.html" class="active">Home</a></li>
+								<li class="dropdown"><a href="#">Shop<i class="fa fa-angle-down"></i></a>
+                                    <ul role="menu" class="sub-menu">
+                                        <li><a href="1.html">Rental</a></li>
+										<li><a href="2.html">Belanja Langsung</a></li> 
+										 
+                                    </ul>
+                                </li> 
+								<li class="dropdown"><a href="#">Tentang Kami<i class="fa fa-angle-down"></i></a>
+                                    <ul role="menu" class="sub-menu">
+                                        <li><a href="blog.html">E-Brenk</a></li>
+										<li><a href="blog-single.html">Cara Belanja</a></li>
+										<li><a href="blog-single.html">Cara Pembayaran</a></li>
+                                    </ul>
+                                </li> 
+								<li><a href="contact-us.html">Kontak Kami</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-3">
+						<div class="search_box pull-right">
+							<input type="text" placeholder="Search"/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!--/header-bottom-->
+	</header><!--/header-->
+	
+	<section id="slider"><!--slider-->
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<div id="slider-carousel" class="carousel slide" data-ride="carousel">
+						<ol class="carousel-indicators">
+							<li data-target="#slider-carousel" data-slide-to="0" class="active"></li>
+							<li data-target="#slider-carousel" data-slide-to="1"></li>
+							<li data-target="#slider-carousel" data-slide-to="2"></li>
+						</ol>
+						
+						<div class="carousel-inner">
+							<div class="item active">
+								<div class="col-sm-6">
+									<img src="images/home/wkwk123.jpg" class="girl img-responsive" alt="" />
+									<img src="images/home/pricing.png"  class="pricing" alt="" />
+								</div>
+								<div class="col-sm-6">
+									<h1><span>New</span>Product</h1>
+									<h2>Berbagai Produk Terbaru</h2>
+									<p>Dapatkan atau coba produk markup terbaru disini </p>
+									<button type="button" class="btn btn-default get">Belanja</button>
+								</div>
+								
+							</div>		
+						</div>
+						
+						<a href="#slider-carousel" class="left control-carousel hidden-xs" data-slide="prev">
+							<i class="fa fa-angle-left"></i>
+						</a>
+						<a href="#slider-carousel" class="right control-carousel hidden-xs" data-slide="next">
+							<i class="fa fa-angle-right"></i>
+						</a>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</section><!--/slider-->
+	
+	<section>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-3">
+					<div class="left-sidebar">
+						<h2>Kategori Produk</h2>
+						<div class="panel-group category-products" id="accordian"><!--category-productsr-->
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<a data-toggle="collapse" data-parent="#accordian" href="#sportswear">
+											<span class="badge pull-right"><i class="fa fa-plus"></i></span>
+											Android
+										</a>
+									</h4>
+								</div>
+							</div>
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<a data-toggle="collapse" data-parent="#accordian" href="#mens">
+											<span class="badge pull-right"><i class="fa fa-plus"></i></span>
+											IOS
+										</a>
+									</h4>
+								</div>
+							</div>
+							
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<a data-toggle="collapse" data-parent="#accordian" href="#womens">
+											<span class="badge pull-right"><i class="fa fa-plus"></i></span>
+											Lainnya
+										</a>
+									</h4>
+								</div>
+							</div>
+						</div><!--/category-products-->
+					
+						<div class="brands_products"><!--brands_products-->
+							<h2>Brand Produk</h2>
+							<div class="brands-name">
+								<ul class="nav nav-pills nav-stacked">
+									<li><a href="#"> <span class="pull-right">(10)</span>Xiaomi</a></li>
+									<li><a href="#"> <span class="pull-right">(26)</span>Samsung</a></li>
+									<li><a href="#"> <span class="pull-right">(17)</span>Asus</a></li>
+									<li><a href="#"> <span class="pull-right">(22)</span>Oppo</a></li>
+								</ul>
+							</div>
+						</div><!--/brands_products-->
+						
+						<div class="brands_products"><!--brands_products-->
+							<h2>Rekomendasi</h2>
+							<div class="brands-name">
+								<ul class="nav nav-pills nav-stacked">
+									<li><a href="#"></a></li>
+									<li><a href="#"></a></li>
+									<li><a href="#"></a></li>
+									<li><a href="#"></a></li>
+									<li><a href="#"></a></li>
+									<li><a href="#"></a></li>
+								</ul>
+							</div>
+						</div><!--/brands_products-->
+						
+						
+					
+					</div>
+				</div>
+				
+				<div class="col-sm-9 padding-right">
+					<div class="features_items"><!--features_items-->
+						<h2 class="title text-center">Produk Terbaru</h2>
+						<div class="col-sm-4">
+							<div class="product-image-wrapper">
+								<div class="single-products">
+										<div class="productinfo text-center">
+											<img src="images/home/hp1.jpg" alt="" />
+											<h2>Rp. 8.300.000</h2>
+											<p>Samsung Galaxy S9</p>
+											<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Beli</a>
+										</div>
+										<div class="product-overlay">
+											<div class="overlay-content">
+												<h2>Rp. 8.300.000</h2>
+											    <p>Samsung Galaxy S9</p>
+												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Beli</a>
+											</div>
+										</div>
+								</div>
+								<div class="choose">
+									<ul class="nav nav-pills nav-justified">
+										<li><a href="#"><i class="fa fa-plus-square"></i>+Wishlist</a></li>
+										<li><a href="#"><i class="fa fa-plus-square"></i>Compare</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="product-image-wrapper">
+								<div class="single-products">
+									<div class="productinfo text-center">
+										<img src="images/home/hp2.jpg" alt="" />
+										    <h2>Rp. 9.390.000</h2>
+											<p>Google Pixel 2</p>
+										<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Beli</a>
+									</div>
+									<div class="product-overlay">
+										<div class="overlay-content">
+											<h2>Rp. 9.390.000</h2>
+											<p>Google Pixel 2</p>
+											<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Beli</a>
+										</div>
+									</div>
+								</div>
+								<div class="choose">
+									<ul class="nav nav-pills nav-justified">
+										<li><a href="#"><i class="fa fa-plus-square"></i>+Wishlist</a></li>
+										<li><a href="#"><i class="fa fa-plus-square"></i>Compare</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="product-image-wrapper">
+								<div class="single-products">
+									<div class="productinfo text-center">
+										<img src="images/home/hp3.jpg" alt="" />
+										    <h2>Rp. 8.698.000</h2>
+											<p>HTC U11</p>
+										<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Beli</a>
+									</div>
+									<div class="product-overlay">
+										<div class="overlay-content">
+											<h2>Rp. 8.698.000</h2>
+											<p>HTC U11</p>
+											<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Beli</a>
+										</div>
+									</div>
+								</div>
+								<div class="choose">
+									<ul class="nav nav-pills nav-justified">
+										<li><a href="#"><i class="fa fa-plus-square"></i>+Wishlist</a></li>
+										<li><a href="#"><i class="fa fa-plus-square"></i>Compare</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="product-image-wrapper">
+								<div class="single-products">
+									<div class="productinfo text-center">
+										<img src="images/home/hp4.jpg" alt="" />
+										<h2>Rp. 8.550.000</h2>
+											<p>One Plus 5T</p>
+										<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Beli</a>
+									</div>
+									<div class="product-overlay">
+										<div class="overlay-content">
+										<h2>Rp. 8.550.000</h2>
+											<p>One Plus 5T</p>
+											<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Beli</a>
+										</div>
+									</div>
+									<img src="images/home/new.png" class="new" alt="" />
+								</div>
+								<div class="choose">
+									<ul class="nav nav-pills nav-justified">
+										<li><a href="#"><i class="fa fa-plus-square"></i>+Wishlist</a></li>
+										<li><a href="#"><i class="fa fa-plus-square"></i>Compare</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="product-image-wrapper">
+								<div class="single-products">
+									<div class="productinfo text-center">
+										<img src="images/home/hp5.jpg" alt="" />
+										<h2>Rp. 9.000.000</h2>
+											<p>Razer Phone</p>
+										<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Beli</a>
+									</div>
+									<div class="product-overlay">
+										<div class="overlay-content">
+											<h2>Rp. 9.000.000</h2>
+											<p>Razer Phone</p>
+											<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Beli</a>
+										</div>
+									</div>
+									<img src="images/home/sale.png" class="new" alt="" />
+								</div>
+								<div class="choose">
+									<ul class="nav nav-pills nav-justified">
+										<li><a href="#"><i class="fa fa-plus-square"></i>+Wishlist</a></li>
+										<li><a href="#"><i class="fa fa-plus-square"></i>Compare</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>					
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<footer id="footer"><!--Footer-->
+			<div class="footer-widget">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-2">
+						<div class="single-widget">
+							<h2>E-Brenk</h2>
+							<ul class="nav nav-pills nav-stacked">
+								<li><a href="#">Tentang Kami</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="single-widget">
+							<h2>Beli</h2>
+							<ul class="nav nav-pills nav-stacked">
+								<li><a href="#">Belanja Di E-Brenk</a></li>
+								<li><a href="#">Cara Belanja</a></li>
+								<li><a href="#">Pembayaran</a></li>
+								<li><a href="#">Hot List</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-3 col-sm-offset-1">
+						<div class="single-widget">
+							<h2>Tentang E-Brenk</h2>
+							<form action="#" class="searchform">
+								<input type="text" placeholder="Your email address" />
+								<button type="submit" class="btn btn-default"><i class="fa fa-arrow-circle-o-right"></i></button>
+								<p>Untuk mendapatkan Update baru dari Toko Online E-Brenk<br />Tinggalkan Email Disini</p>
+							</form>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		
+		<div class="footer-bottom">
+			<div class="container">
+				<div class="row">
+					<p class="pull-left">Copyright &copy;  2016 E-Brenk. All rights reserved.</p>
+					<p class="pull-right">Powered by <span><a>E-Brenk</a></span></p>
+				</div>
+			</div>
+		</div>
+		
+	</footer><!--/Footer-->
+</body>
+</html>
