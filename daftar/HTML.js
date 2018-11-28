@@ -43,5 +43,5 @@ $('.tab a').on('click', function (e) {
 });
 function klik()
 {
-	window.open('../login/login.html'); //This will open Google in a new window.
+	window.open('../login/login.html'); 
 }
