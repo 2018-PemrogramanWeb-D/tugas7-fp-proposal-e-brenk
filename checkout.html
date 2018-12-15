@@ -1,0 +1,220 @@
+<?php $link = mysql_connect ("localhost", "Gusrai", "jonmin123"); ?>
+
+
+<html>
+
+<head>
+	<?php $link = mysql_connect ("localhost", "Gusrai", "jonmin123"); ?>
+
+	<title>Online Shop E-Brenk</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<script type="text/javascript" src="index.js"></script>
+	<link href="css/checkout.css" rel="stylesheet">
+	
+</head><!--/head-->
+
+<body>
+	<header id="header"><!--header-->
+		<div class="header_top"><!--header_top-->
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-8">
+						<div class="contactinfo">
+							<div class="col-sm-4">
+									<a href="index.html"><img src="images/home/serigala.jpg" width="200" height="40" alt="">" /></a>
+								<div class="logo pull-left">
+								</div>
+							</div>
+							<ul class="nav navbar-nav">
+								<li><a onclick=klik()  ><i class="fa fa-user"></i> Login</a></li>
+								<li><a onclick=register()><i class="fa fa-star"></i> Daftar</a></li>
+								<li><a href="#"><i class="fa fa-crosshairs"></i> Checkout</a></li>
+								<li><a href="#"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+							</ul>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div><!--/header_top-->
+		<div class="header-bottom"><!--header-bottom-->
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-9">
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+						</div>
+						<div class="mainmenu pull-left">
+							<ul class="nav navbar-nav collapse navbar-collapse">
+								<li><a href="index.html" class="active">Home</a></li>
+								<li class="dropdown"><a href="#">Shop<i class="fa fa-angle-down"></i></a>
+                                    <ul role="menu" class="sub-menu">
+                                        <li><a href="1.html">Rental</a></li>
+										<li><a href="2.html">Belanja Langsung</a></li> 
+										 
+                                    </ul>
+                                </li> 
+								<li class="dropdown"><a href="#">About<i class="fa fa-angle-down"></i></a>
+                                    <ul role="menu" class="sub-menu">
+                                        <li><a onclick=about()>E-Brenk</a></li>
+										<li><a href="blog-single.html">Cara Belanja</a></li>
+										<li><a href="blog-single.html">Cara Pembayaran</a></li>
+                                    </ul>
+                                </li> 
+								<li><a href="contact-us.html">Kontak Kami</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-3">
+						<div class="search_box pull-right">
+							<input type="text" placeholder="Search"/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!--/header-bottom-->
+	</header><!--/header-->
+	
+	<section ><!--slider-->
+	<div class="row">
+  <div class="col-75">
+    <div class="container">
+      <form action="/action_page.php">
+
+        <div class="row">
+          <div class="col-50">
+            <h3>Billing Address</h3>
+            <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="John M. Doe">
+            <label for="email"><i class="fa fa-envelope"></i> Email</label>
+            <input type="text" id="email" name="email" placeholder="john@example.com">
+            <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+            <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
+            <label for="city"><i class="fa fa-institution"></i> City</label>
+            <input type="text" id="city" name="city" placeholder="New York">
+
+            <div class="row">
+              <div class="col-50">
+                <label for="state">State</label>
+                <input type="text" id="state" name="state" placeholder="NY">
+              </div>
+              <div class="col-50">
+                <label for="zip">Zip</label>
+                <input type="text" id="zip" name="zip" placeholder="10001">
+              </div>
+            </div>
+          </div>
+
+          <div class="col-50">
+            <h3>Payment</h3>
+            <label for="fname">Accepted Cards</label>
+            <div class="icon-container">
+              <i class="fa fa-cc-visa" style="color:navy;"></i>
+              <i class="fa fa-cc-amex" style="color:blue;"></i>
+              <i class="fa fa-cc-mastercard" style="color:red;"></i>
+              <i class="fa fa-cc-discover" style="color:orange;"></i>
+            </div>
+            <label for="cname">Name on Card</label>
+            <input type="text" id="cname" name="cardname" placeholder="John More Doe">
+            <label for="ccnum">Credit card number</label>
+            <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+            <label for="expmonth">Exp Month</label>
+            <input type="text" id="expmonth" name="expmonth" placeholder="September">
+
+            <div class="row">
+              <div class="col-50">
+                <label for="expyear">Exp Year</label>
+                <input type="text" id="expyear" name="expyear" placeholder="2018">
+              </div>
+              <div class="col-50">
+                <label for="cvv">CVV</label>
+                <input type="text" id="cvv" name="cvv" placeholder="352">
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <label>
+          <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
+        </label>
+        <input type="submit" value="Continue to checkout" class="btn">
+      </form>
+    </div>
+  </div>
+
+  <div class="col-25">
+    <div class="container">
+      <h4>Cart 
+        <span class="price" style="color:black">
+          <i class="fa fa-shopping-cart"></i> 
+          <b>4</b>
+        </span>
+      </h4>
+      <p><a href="#">Product 1</a> <span class="price">$15</span></p>
+      <p><a href="#">Product 2</a> <span class="price">$5</span></p>
+      <p><a href="#">Product 3</a> <span class="price">$8</span></p>
+      <p><a href="#">Product 4</a> <span class="price">$2</span></p>
+      <hr>
+      <p>Total <span class="price" style="color:black"><b>$30</b></span></p>
+    </div>
+  </div>
+</div>
+		
+	</section>
+	
+	<footer id="footer"><!--Footer-->
+			<div class="footer-widget">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-2">
+						<div class="single-widget">
+							<h2>E-Brenk</h2>
+							<ul class="nav nav-pills nav-stacked">
+								<li><a onclick=about()>Tentang Kami</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="single-widget">
+							<h2>Beli</h2>
+							<ul class="nav nav-pills nav-stacked">
+								<li><a href="#">Belanja Di E-Brenk</a></li>
+								<li><a href="#">Cara Belanja</a></li>
+								<li><a href="#">Pembayaran</a></li>
+								<li><a href="#">Hot List</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-3 col-sm-offset-1">
+						<div class="single-widget">
+							<h2>Tentang E-Brenk</h2>
+							<form action="#" class="searchform">
+								<input type="text" placeholder="Your email address" />
+								<button type="submit" class="btn btn-default"><i class="fa fa-arrow-circle-o-right"></i></button>
+								<p>Untuk mendapatkan Update baru dari Toko Online E-Brenk<br />Tinggalkan Email Disini</p>
+							</form>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		
+		<div class="footer-bottom">
+			<div class="container">
+				<div class="row">
+					<p class="pull-left">Copyright &copy;  2018 E-Brenk. All rights reserved.</p>
+					<p class="pull-right">Powered by <span><a>E-Brenk</a></span></p>
+				</div>
+			</div>
+		</div>
+		
+	</footer><!--/Footer-->
+</body>
+</html>

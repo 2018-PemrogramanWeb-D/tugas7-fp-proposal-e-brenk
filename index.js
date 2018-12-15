@@ -1,12 +1,12 @@
 function klik()
 {
-	window.location = "login/login.html"; 
+	window.open('login.php'); //This will open Login.html in a new window.
 }
 function register()
 {
-	window.location = "daftar/HTML.html";
+	window.open('Register.php'); //This will open HTML(1) in a new window.
 }
-function about()
+function logout()
 {
-	window.location = "abput_us.html";
+	window.open('logout.php'); //This will open HTML(1) in a new window.
 }

@@ -1,13 +1,16 @@
 <?php
-
-$server = "localhost";
-$user = "Gusrai";
-$password = "jonmin123";
-$nama_database = "e-brenk";
-
-$db = mysqli_connect($server, $user, $password, $nama_database);
-if( !$db ){
-    die("Gagal terhubung dengan database: " . mysqli_connect_error());
+/* Database credentials. Assuming you are running MySQL
+server with default setting (user 'root' with no password) */
+define('DB_SERVER', 'localhost');
+define('DB_USERNAME', 'Gusrai');
+define('DB_PASSWORD', 'jonmin123');
+define('DB_NAME', 'e-brenk');
+ 
+/* Attempt to connect to MySQL database */
+$link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
+ 
+// Check connection
+if($link === false){
+    die("ERROR: Could not connect. " . mysqli_connect_error());
 }
-
 ?>
